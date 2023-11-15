@@ -1,0 +1,186 @@
+.h1 {
+    margin: 0;
+    position: absolute;
+    right: 1em;
+    top: 0vh;
+    font-size: 7vh;
+    color: black;
+    text-shadow: 3px 3px red;
+}
+
+.h1 > i {
+    display: none;
+}
+
+body {
+    font-family: "Modern Antiqua";
+    font-size: 7vmin;
+    background-image: url('zombie_graveyard1.jpg');
+    background-position: center top;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: black;
+    background-repeat: no-repeat;
+}
+
+#tips {
+    color: yellow;
+}
+
+#board {
+    border: 3px ridge red;
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 5vw;
+    /*right: calc(24vw + 2em);*/
+    top: 10vh;
+    overflow: hidden;
+    transform-origin: top left;
+    background-color: rgba(255,255,255,0.0);
+}
+
+#board > div {
+    height: 8vmin;
+    white-space: nowrap;
+}
+
+#board-cover {
+    opacity: 0.4;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#board > div > span {
+    width: 8vmin;
+    height: 8vmin;
+    border-top: 4px solid #808080;
+    border-left: 4px solid #808080;
+    border-right: 4px solid #404040;
+    border-bottom: 4px solid #404040;
+    background-color: #606060;
+    display: inline-block;
+    transition: background-color 0.5s;
+    box-sizing: border-box;
+}
+
+#board > div > span.revealed {
+    border: none;
+    background-color: rgba(255,255,255,0.0);
+    font-size: 6vmin;
+    text-align: center;
+    vertical-align: top;
+    color: red;
+    text-shadow: 1px 1px 1px black;
+    box-sizing: border-box;
+}
+
+#board > div > span > span.brain {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    vertical-align: top;
+    display: inline;
+}
+
+.flagged {
+    background-image: url('bang.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.brains {
+    background-image: url('brain.png');
+    background-position: center;
+    background-size: cover;
+}
+
+#exploding-brain, #exploding-shotgun {
+    width: 100px;
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    transition: all 1.0s ease-out;
+    opacity: 1;
+    z-index: 1;
+    display: none;
+}
+
+.buttonPopup {
+    position: absolute;
+    /*width: 50vw;*/
+    left: 50%;
+    top: 50%;
+    padding: 2em;
+    transform: translate(-50%, -50%);
+    font-size: 2.5vh;
+    z-index: 20;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 0.5em;
+    box-shadow: 0.5em 0.5em 0.5em #404040;
+    color: white;
+    text-align: center;
+    border: 1px solid red;
+    /*white-space: nowrap;*/
+}
+
+.buttonPopup p {
+    white-space: nowrap;
+}
+
+.buttonPopup ul {
+    font-size: x-large;
+}
+
+.buttonPopup > div {
+    padding: 0.5em;
+    text-align: left;
+}
+
+.buttonPopup button {
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0.5em;
+    border-radius: 0.25em;
+}
+
+.buttonPopup select {
+    font-family: inherit;
+    font-size: inherit;
+    display: inline-block;
+    margin-bottom: 0.25em;
+    border-radius: 0.25em;
+    text-align: left;
+}
+
+.buttonPopup span {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+}
+
+#brains-score {
+    position: absolute;
+    left: 5vw;
+    bottom: 1vw;
+}
+
+#brains-score img {
+    height: 5vh;
+}
+
+#instructions {
+    width: 24vw;
+    position: absolute;
+    top: 15vh;
+    right: 1em;
+    font-size: 2.3vh;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    z-index: 15;
+}

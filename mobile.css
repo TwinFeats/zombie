@@ -1,0 +1,26 @@
+body {
+    overflow: auto;
+    background-position: center top;
+    background-size: cover;
+}
+
+#instructions {
+    display: none;
+    top: 10vh;
+    left: 1em;
+    width: 90vw;
+    background-color: black;
+    max-height: 90vh;
+    overflow: auto;
+}
+
+.h1 {
+    font-size: 5vh;
+}
+
+.h1 > i {
+    display: inline-block;
+    height: 1em;
+    vertical-align: middle;
+}
+
