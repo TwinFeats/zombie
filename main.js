@@ -24,23 +24,20 @@ $(document).ready(function() {
     });
     
     mindSweeper = MindSweeper();
-    //	mindSweeper.newGame("Kent",10,10,10,10);
-    //	sameGame();
     newGame();
 
     function newGame() {
         var select = "<span>Board size</span> <select name='boardType'>";
-        select += "<option selected>10x10</option>";
-        select += "<option>10x15</option>";
-        select += "<option>15x15</option>";
-        select += "<option>20x30</option>";
-        select += "<option>30x45</option>";
+        select += "<option selected>6x6</option>";
+        select += "<option>8x8</option>";
+        select += "<option>10x10</option>";
+        select += "<option>20x20</option>";
         select += "</select><br/>";
         select += "<span>Difficulty</span> <select name='level'>";
         select += "<option value='10' selected>Easy</option>";
         select += "<option value='15'>Medium</option>";
         select += "<option value='20'>Hard</option>";
-        select += "<option value='23'>Appocolypse</option>";
+        select += "<option value='25'>Appocolypse</option>";
         select += "</select><br/>";
         $("body").buttonPopup({
             message: "Game Options<p>"+select+"</p>",
