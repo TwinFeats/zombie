@@ -1,0 +1,1 @@
+Mindsweeper was co-written with a student of mine a few years ago. She loved the old Microsoft Minesweeper game as well as zombies, so we decided to combine the two in this variant. Like Minesweeper you have to avoid the dangers of shotguns but with the added twist of really being out to find brains. You'll receive clues as to the location of each as you explore the board. Enjoy!
