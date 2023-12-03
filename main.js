@@ -1,8 +1,9 @@
 var mindSweeper;
 var numBrains = 0;
+
 $(document).ready(function() {
     var ctrl = false;
-    $(".h1 > i").click(function() {
+    $(".h1 > i, #instructions > .close").click(function() {
         $("#instructions").toggle();    
     });
     
@@ -68,14 +69,6 @@ $(document).ready(function() {
         numBrains = 0;
         $("#board").empty();
         $("#brains-score").empty();
-        // $("#board").append("<img id='board-cover' src='zombie_graveyard1.jpg'/>")
-        // $("#board-cover").click(function(e) {
-        //     $(this).hide();
-        //     $(document.elementFromPoint(e.clientX, e.clientY)).trigger($.Event('click', {
-        //         shiftKey: e.shiftKey, ctrlKey: e.ctrlKey
-        //     }));
-        //     $(this).show();
-        // });
         if (mindSweeper.getBoardHeight() == mindSweeper.getBoardWidth()) {
             $("#board-cover").css({
                 width: "auto", height: "100%"
@@ -84,14 +77,9 @@ $(document).ready(function() {
         for (var i = 0; i < mindSweeper.getNumBrains(); i++) {
             $("#brains-score").append("<img src='brain.png'/>");
         }
-        // $("#board").css("left", (2+(45-mindSweeper.getBoardWidth())/3.25)+"vw");
-        // $("#brains-score").css("left", (2+(45-mindSweeper.getBoardWidth())/3.25)+"vw");
         if (mindSweeper.getBoardHeight() >= 20 || mindSweeper.getBoardWidth() >= 20) {
             $("#brains-score img").css("height", "2vh");
         }
-        // if (mindSweeper.getBoardHeight() == 30 || mindSweeper.getBoardWidth() == 30) {
-        //     $("#brains-score img").css("height", "1.5vh");
-        // }
         for (var row = 0; row < mindSweeper.getBoardHeight(); row++) {
             var rowdiv = $("<div>");
             for (var col = 0; col < mindSweeper.getBoardWidth(); col++) {
@@ -173,12 +161,6 @@ $(document).ready(function() {
         if (mindSweeper.getBoardHeight() > 10) {
             var scale = 10/mindSweeper.getBoardHeight();
             if (window.innerHeight > window.innerWidth) {
-                // if (mindSweeper.getBoardWidth() == 15) {
-                //     scale = scale*1.2;
-                // }
-                // else if (mindSweeper.getBoardHeight() > 10) {
-                //     scale = scale*1.5;
-                // }
                 if (mindSweeper.getBoardWidth() !== 15) {
                     scale = scale*1.5;
                 }
@@ -246,12 +228,6 @@ $(document).ready(function() {
                     sameGame();
                 }
             },
-                // {
-                //     label: "No",
-                //     action: function() {
-                //         $("body").buttonPopup("close");
-                //     }
-                // },
                 {
                     label: "Change options",
                     action: function() {
